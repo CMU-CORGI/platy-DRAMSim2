@@ -39,6 +39,7 @@
 #include "MemorySystem.h"
 #include "IniReader.h"
 #include <unistd.h>
+#include <cassert>
 
 using namespace std;
 
@@ -119,7 +120,9 @@ MemorySystem::MemorySystem(unsigned id, unsigned int megsOfMemory, CSVWriter &cs
 		NUM_RANKS_LOG = dramsim_log2(NUM_RANKS);
 		if (NUM_RANKS == 0)
 		{
-			PRINT("WARNING: Cannot create memory system with "<<megsOfMemory<<"MB, defaulting to minimum size of "<<megsOfStoragePerRank<<"MB");
+			fprintf(stderr, "WARNING: Cannot create memory system with %u MB\n", megsOfMemory);
+            assert(false);
+            PRINT("WARNING: Cannot create memory system with "<<megsOfMemory<<"MB, defaulting to minimum size of "<<megsOfStoragePerRank<<"MB");
 			NUM_RANKS=1;
 		}
 	}

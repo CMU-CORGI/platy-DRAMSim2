@@ -64,13 +64,13 @@ class MultiChannelMemorySystem : public SimulatorObject
 
 	void InitOutputFiles(string tracefilename);
 	void setCPUClockSpeed(uint64_t cpuClkFreqHz);
+	unsigned findChannelNumber(uint64_t addr);
 
 	//output file
 	std::ofstream visDataOut;
 	ofstream dramsim_log; 
 
 	private:
-		unsigned findChannelNumber(uint64_t addr);
 		void actual_update(); 
 		vector<MemorySystem*> channels; 
 		unsigned megsOfMemory; 

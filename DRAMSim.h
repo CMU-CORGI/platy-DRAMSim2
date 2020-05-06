@@ -60,6 +60,8 @@ namespace DRAMSim
 			int getIniUint(const std::string &field, unsigned int *val);
 			int getIniUint64(const std::string &field, uint64_t *val);
 			int getIniFloat(const std::string &field, float *val);
+			unsigned findChannelNumber(uint64_t addr);
+    
 	};
 	MultiChannelMemorySystem *getMemorySystemInstance(const string &dev, const string &sys, const string &pwd, const string &trc, unsigned megsOfMemory, std::string *visfilename=NULL);
 }
