@@ -1,3 +1,8 @@
+
+This is a fork of DRAMSim2 with slight modification to support the Platy microarchitectural simulator.
+
+------------------------------------------------------------------------------------------------------
+
 DRAMSim2: A cycle accurate DRAM Simulator
 ================================================================================
 Elliott Cooper-Balis
